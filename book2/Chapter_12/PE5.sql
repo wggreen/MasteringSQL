@@ -1,7 +1,7 @@
-CREATE VIEW mostsales4 AS
+CREATE VIEW mostsales5 AS
 	SELECT
-  		CONCAT(e.first_name, ' ', e.last_name) AS employee_name,
 		d.business_name AS dealership,
+  		CONCAT(e.first_name, ' ', e.last_name) AS employee_name,
 		COUNT(e.employee_id) AS total_sales
 	FROM sales s
 	JOIN employees e
@@ -13,4 +13,4 @@ CREATE VIEW mostsales4 AS
 	GROUP BY employee_name, d.business_name
 	ORDER BY total_sales DESC;
 	
-SELECT * from mostsales4
+SELECT * from mostsales5
