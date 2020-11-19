@@ -26,3 +26,5 @@ END
 $$;
 
 CALL sell_car(1, 1, 2, 1, 1, 20000.00, 1, '2020-11-09', '2020-11-10', '123456789', 'mastercard');
+
+SELECT sale_id FROM sales WHERE invoice_number = '123456789';
